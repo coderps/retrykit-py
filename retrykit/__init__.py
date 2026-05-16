@@ -1,3 +1,9 @@
+"""Public API for retrykit-py.
+
+Install the distribution as ``retrykit-py`` and import the package as
+``retrykit``.
+"""
+
 from __future__ import annotations
 
 from .backoff import Backoff, exponential_backoff, fixed_backoff, no_backoff, with_jitter

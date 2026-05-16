@@ -140,6 +140,18 @@ async def fetch_data():
 
 Async retries use `asyncio.sleep`. By default, `asyncio.CancelledError` is not retried, so task cancellation propagates normally.
 
+## Publishing
+
+This repository is configured for PyPI packaging with `pyproject.toml`. To build and check release artifacts locally:
+
+```bash
+python -m pip install -e ".[dev]"
+python -m build
+python -m twine check dist/*
+```
+
+The PyPI distribution name is `retrykit-py`; the Python import remains `retrykit`.
+
 ## Design philosophy
 
 - Small API surface.
